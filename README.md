@@ -1,2 +1,10 @@
-# Portfolio
-This is a repository that I have created to showcase skills and share project. 
+# Orhun Kaan Sendur
+
+## About me
+Hi, I'm Orhun Kaan Sendur. 
+
+
+
+# Projects
+
+
