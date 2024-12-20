@@ -1,0 +1,72 @@
+{
+  "script_name": "Uber Reviews Data Cleaning",
+  "description": "A data cleaning script for Uber app reviews dataset",
+  "dependencies": [
+    "pandas",
+    "numpy",
+    "re"
+  ],
+  "data_cleaning_steps": [
+    {
+      "step": "Initial Data Loading",
+      "description": "Load the dataset from CSV file",
+      "code_snippet": "df = pd.read_csv(data_path)"
+    },
+    {
+      "step": "Column Removal",
+      "description": "Remove unnecessary columns",
+      "columns_removed": [
+        "userImage",
+        "replyContent",
+        "repliedAt"
+      ]
+    },
+    {
+      "step": "Date Handling",
+      "description": "Convert timestamps to datetime format",
+      "code_snippet": "df_clean['at'] = pd.to_datetime(df_clean['at'], errors='coerce')"
+    },
+    {
+      "step": "Text Cleaning",
+      "description": "Clean review content",
+      "operations": [
+        "Convert to lowercase",
+        "Remove special characters",
+        "Remove extra whitespace"
+      ]
+    },
+    {
+      "step": "Feature Engineering",
+      "description": "Add new features and handle versions",
+      "new_features": [
+        "review_length",
+        "major_version"
+      ]
+    },
+    {
+      "step": "Data Validation",
+      "description": "Validate scores and handle duplicates",
+      "validations": [
+        "Score range check (1-5)",
+        "Duplicate review removal",
+        "Missing value analysis"
+      ]
+    }
+  ],
+  "output_metrics": [
+    "Dataset shape",
+    "Missing values count",
+    "Invalid dates count",
+    "Invalid scores count",
+    "Duplicate reviews count",
+    "Average review length",
+    "Score distribution",
+    "Version distribution"
+  ],
+  "output_file": "clean_uber_reviews.csv",
+  "sample_usage": {
+    "input_format": "CSV file with Uber app reviews",
+    "output_format": "Cleaned CSV file with processed reviews",
+    "execution": "python data_cleaning.py"
+  }
+}
