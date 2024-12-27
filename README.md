@@ -9,5 +9,4 @@ Welcome to my portfolio of data analytics projects. Each project demonstrates di
    - Description: Cleaned a dataset of Uber customer reviews to prepare for analysis.
 
 2. [Other Project](another-project/README.md)
-   - Skills: [Describe relevant skills].
-   - Description: [Short description of the project].
+  
